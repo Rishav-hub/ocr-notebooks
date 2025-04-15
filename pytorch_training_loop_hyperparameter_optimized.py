@@ -653,8 +653,8 @@ def train_donut_model(model: PreTrainedModel, processor: PreTrainedTokenizerBase
 
         # 🟢 Push to Hugging Face Hub after each epoch
         print("🔄 Pushing model and processor to Hugging Face Hub...")
-        model.push_to_hub("Laskari-Naveen/pytorch_8April_Table_RC", commit_message=f"Update after Epoch {epoch + 1}, Validation Loss: {avg_val_loss:.4f}, Validation CER: {avg_cer:.4f}", create_pr=1, use_auth_token='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')
-        processor.push_to_hub("Laskari-Naveen/pytorch_8April_Table_RC", commit_message=f"Update after Epoch {epoch + 1}, Validation Loss: {avg_val_loss:.4f}, Validation CER: {avg_cer:.4f}", create_pr=1, use_auth_token='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')
+        model.push_to_hub("Laskari-Naveen/pytorch_8April_Table_RC", commit_message=f"Update after Epoch {epoch + 1}, Validation Loss: {avg_val_loss:.4f}, Validation CER: {avg_cer:.4f}", create_pr=1)
+        processor.push_to_hub("Laskari-Naveen/pytorch_8April_Table_RC", commit_message=f"Update after Epoch {epoch + 1}, Validation Loss: {avg_val_loss:.4f}, Validation CER: {avg_cer:.4f}", create_pr=1)
         print("✅ Model and processor pushed successfully!")
 
     print("Training complete.")
@@ -668,7 +668,7 @@ train_donut_model(model, processor, train_dataloader, val_dataloader, num_epochs
 
 # 🟢 Push to Hugging Face Hub after each epoch
 print("🔄 Pushing model and processor to Hugging Face Hub...")
-model.push_to_hub("Laskari-Naveen/pytorch_8April_Table_RC", commit_message=f"Last commit {num_epochs}", create_pr=1, use_auth_token='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')
-processor.push_to_hub("Laskari-Naveen/pytorch_8April_Table_RC", commit_message=f"Last commit {num_epochs}", create_pr=1, use_auth_token='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')
+model.push_to_hub("Laskari-Naveen/pytorch_8April_Table_RC", commit_message=f"Last commit {num_epochs}", create_pr=1)
+processor.push_to_hub("Laskari-Naveen/pytorch_8April_Table_RC", commit_message=f"Last commit {num_epochs}", create_pr=1)
 print("✅ Model and processor pushed successfully!")
 free_memory()

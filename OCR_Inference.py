@@ -22,8 +22,8 @@ from collections import defaultdict
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-p1_processor = AutoProcessor.from_pretrained("Laskari-Naveen/pytorch_8April_Table_RC", token = "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")
-p1_model = VisionEncoderDecoderModel.from_pretrained("Laskari-Naveen/pytorch_8April_Table_RC", token = "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").to(device)
+p1_processor = AutoProcessor.from_pretrained("Laskari-Naveen/pytorch_8April_Table_RC")
+p1_model = VisionEncoderDecoderModel.from_pretrained("Laskari-Naveen/pytorch_8April_Table_RC").to(device)
 
 # p2_processor = AutoProcessor.from_pretrained("/content/models/content/huggingface_models/models--Laskari-Naveen--UB_Table_Model/snapshots/5fc871e156f3c46ba4704d3e5bda8a080008a40c")
 # p2_model = VisionEncoderDecoderModel.from_pretrained("/content/models/content/huggingface_models/models--Laskari-Naveen--UB_Table_Model/snapshots/5fc871e156f3c46ba4704d3e5bda8a080008a40c").to(device)
